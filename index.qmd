@@ -1,6 +1,31 @@
 ---
 title: "Puqiu Zhao, PhD"
+page-title: "Puqiu Zhao, PhD"
 subtitle: "Political Scientist at King's College London"
+image: assets/avatar.jpeg
+image-alt: "my avatar"
+about:
+  template: solana
+  image-shape: round
+  image-width: 16em
+
+id: hero-heading
+links:
+ - icon: github
+   aria-label: GitHub
+   href: https://github.com/zhaopuqiu0818-svg
+ - text: "{{< ai google-scholar >}}"
+   aria-label: "Google Scholar"
+   href: https://scholar.google.com/citations?hl=zh-CN&user=BFxRe6cAAAAJ
+
+page-layout: full
+
+execute: 
+  freeze: false
+  echo: false
+  warning: false
+
+comments: false
 ---
 
 I am a 2nd year PhD student in the Dpartment of Political Economy since October 2025, fully funded by the [London Interdiciplinary Social Science Doctoral Training Parnership](https://liss-dtp.ac.uk/students/puqiu-zhao/) and UKRI Economic Social Research Council. My research investigates how stringent climate and energy policies influence potential Green backlash under exougenous shocks. My broader research interest is the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition.
