@@ -2,29 +2,25 @@
 title: "Puqiu Zhao, PhD"
 page-title: "Puqiu Zhao, PhD"
 subtitle: "Political Scientist at King's College London"
-image: assets/avatar.jpeg
-image-alt: "my avatar"
 about:
   template: solana
+  image: assets/avatar.jpeg
+  image-alt: "my avatar"
   image-shape: round
-  image-width: 16em
-
-id: hero-heading
-links:
- - icon: github
-   aria-label: GitHub
-   href: https://github.com/zhaopuqiu0818-svg
- - text: "{{< ai google-scholar >}}"
-   aria-label: "Google Scholar"
-   href: https://scholar.google.com/citations?hl=zh-CN&user=BFxRe6cAAAAJ
-
+  image-width: 17em
+  id: hero-heading
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/zhaopuqiu0818-svg
+    - text: "{{< ai google-scholar >}}"
+      aria-label: "Google Scholar"
+      href: https://scholar.google.com/citations?hl=zh-CN&user=BFxRe6cAAAAJ
 page-layout: full
-
 execute: 
   freeze: false
   echo: false
   warning: false
-
 comments: false
 ---
 
