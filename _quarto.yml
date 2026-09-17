@@ -13,7 +13,7 @@ website:
       - href: cv.qmd
         text: CV
   page-footer:
-    center: "This page was made with Quarto and Claude.<br>© 2026 Puqiu Zhao"
+    center: "This page was made with Quarto and Claude.<br>© 2026 Puqiu Zhao · Norwich · puqiu.zhao@kcl.ac.uk"
 
 format:
   html:
