@@ -80,17 +80,11 @@ body.quarto-dark #quarto-document-content {
   white-space: nowrap;
   width: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  border-right: 2px solid currentColor;
-  animation: subtitle-typing 2.5s steps(44, end) forwards,
-             subtitle-caret 0.75s step-end infinite;
+  animation: subtitle-typing 2.5s steps(44, end) forwards;
 }
 
 @keyframes subtitle-typing {
   from { width: 0; }
   to { width: 44ch; }
-}
-
-@keyframes subtitle-caret {
-  50% { border-color: transparent; }
 }
 
