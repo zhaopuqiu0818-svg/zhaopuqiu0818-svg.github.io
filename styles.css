@@ -70,3 +70,27 @@ body.quarto-dark #quarto-document-content {
   }
 }
 
+/* subtitle typed out like a terminal prompt */
+.quarto-about-jolla .subtitle {
+  position: relative;
+  left: 50%;
+  transform: translateX(-22ch);
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  border-right: 2px solid currentColor;
+  animation: subtitle-typing 2.5s steps(44, end) forwards,
+             subtitle-caret 0.75s step-end infinite;
+}
+
+@keyframes subtitle-typing {
+  from { width: 0; }
+  to { width: 44ch; }
+}
+
+@keyframes subtitle-caret {
+  50% { border-color: transparent; }
+}
+
