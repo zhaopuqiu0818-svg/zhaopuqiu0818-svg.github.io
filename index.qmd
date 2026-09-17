@@ -45,7 +45,7 @@ I am a 2nd year PhD student in the [Department of Political Economy](https://www
 
 **Preparing for Upgrade Viva** · Expected: early 2027
 
-Currently writing the theoretical framework (roadmap to the empirical analysis) on why voters are less myopic under certain circumstances.
+Currently developing the theoretical framework to explain why voters exhibit less myopic behaviour under certain circumstances, and to provide a roadmap for the empirical analysis.
 :::
 
 [Read me more →](about.qmd)
