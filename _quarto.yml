@@ -4,16 +4,22 @@ project:
 website:
   title: "Puqiu Zhao"
   navbar:
+    logo: assets/globe.svg
+    logo-alt: "Globe icon"
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: cv.qmd
+        text: CV
+  page-footer:
+    center: "This page was made with Quarto and Claude.<br>© 2026 Puqiu Zhao"
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: [cosmo, brand]
+      dark: [darkly, brand]
     css: styles.css
     toc: true
 

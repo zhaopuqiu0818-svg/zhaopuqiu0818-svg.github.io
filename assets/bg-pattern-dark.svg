@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#05173f"/>
+
+  <!-- faint chart gridlines -->
+  <g stroke="#93a5c4" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="150" x2="1600" y2="150"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="450" x2="1600" y2="450"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+  </g>
+
+  <!-- trend line with faint area fill, like a price/vote-share series -->
+  <path d="M0,500 L80,470 L160,510 L240,430 L320,460 L400,380 L480,420 L560,350 L640,390 L720,320 L800,360 L880,300 L960,340 L1040,280 L1120,320 L1200,260 L1280,300 L1360,240 L1440,280 L1520,230 L1600,260 L1600,900 L0,900 Z" fill="#cbd5e1" opacity="0.04"/>
+  <polyline points="0,500 80,470 160,510 240,430 320,460 400,380 480,420 560,350 640,390 720,320 800,360 880,300 960,340 1040,280 1120,320 1200,260 1280,300 1360,240 1440,280 1520,230 1600,260" fill="none" stroke="#cbd5e1" stroke-width="2" opacity="0.2"/>
+
+  <!-- second, smoother trend line -->
+  <polyline points="0,680 100,660 200,690 300,650 400,670 500,630 600,650 700,610 800,630 900,600 1000,615 1100,590 1200,605 1300,580 1400,595 1500,570 1600,585" fill="none" stroke="#e2e8f0" stroke-width="1.5" opacity="0.16"/>
+
+  <!-- coefficient plot cluster: dashed zero line + point estimates with CI whiskers -->
+  <g transform="translate(1120,90)">
+    <line x1="120" y1="0" x2="120" y2="260" stroke="#93a5c4" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+    <g stroke="#cbd5e1" stroke-width="1.5" opacity="0.22">
+      <line x1="60" y1="20" x2="180" y2="20"/>
+      <line x1="40" y1="60" x2="150" y2="60"/>
+      <line x1="90" y1="100" x2="220" y2="100"/>
+      <line x1="30" y1="140" x2="130" y2="140"/>
+      <line x1="70" y1="180" x2="200" y2="180"/>
+      <line x1="50" y1="220" x2="160" y2="220"/>
+    </g>
+    <g fill="#f1f5f9" opacity="0.3">
+      <circle cx="130" cy="20" r="4"/>
+      <circle cx="95" cy="60" r="4"/>
+      <circle cx="160" cy="100" r="4"/>
+      <circle cx="75" cy="140" r="4"/>
+      <circle cx="140" cy="180" r="4"/>
+      <circle cx="100" cy="220" r="4"/>
+    </g>
+  </g>
+</svg>
