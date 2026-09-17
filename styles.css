@@ -75,7 +75,7 @@ body.quarto-dark #quarto-document-content {
   position: relative;
   left: 50%;
   transform: translateX(-22ch);
-  display: inline-block;
+  display: block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -94,7 +94,7 @@ body.quarto-dark #quarto-document-content {
   position: relative;
   left: 50%;
   transform: translateX(-31.5ch);
-  display: inline-block;
+  display: block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -103,12 +103,18 @@ body.quarto-dark #quarto-document-content {
   font-size: 0.8rem;
   font-weight: 300;
   opacity: 0.65;
-  animation: research-typing 3.6s steps(63, end) 2.5s forwards;
+  border-right: 1px solid currentColor;
+  animation: research-typing 3.6s steps(63, end) 2.5s forwards,
+             research-caret 0.75s step-end infinite 2.5s;
 }
 
 @keyframes research-typing {
   from { width: 0; }
   to { width: 63ch; }
+}
+
+@keyframes research-caret {
+  50% { border-color: transparent; }
 }
 
 @media (max-width: 480px) {
