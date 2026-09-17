@@ -89,7 +89,7 @@ body.quarto-dark #quarto-document-content {
 }
 
 /* research areas, typed out thinner and smaller, right after the subtitle finishes */
-.quarto-title::after {
+.quarto-about-jolla .quarto-title::after {
   content: "European Politics, Environmental Politics, and Causal Inference";
   position: relative;
   left: 50%;
@@ -118,8 +118,73 @@ body.quarto-dark #quarto-document-content {
 }
 
 @media (max-width: 480px) {
-  .quarto-title::after {
+  .quarto-about-jolla .quarto-title::after {
     font-size: 0.7rem;
   }
+}
+
+/* terminal-style "current status" card */
+.status-terminal {
+  max-width: 34em;
+  margin: 1.5em auto;
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.status-terminal-bar {
+  display: flex;
+  gap: 0.4em;
+  padding: 0.6em 0.8em;
+  background: #2d2d2d;
+}
+
+.status-terminal-bar .dot {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-terminal-bar .dot-red { background: #ff5f56; }
+.status-terminal-bar .dot-yellow { background: #ffbd2e; }
+.status-terminal-bar .dot-green { background: #27c93f; }
+
+.status-terminal p {
+  padding: 0 1.1em;
+  margin: 0.7em 0;
+  color: #d4d4d4;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.status-terminal p:last-of-type {
+  margin-bottom: 1em;
+}
+
+.status-terminal code {
+  background: transparent;
+  padding: 0;
+  color: #7ee787;
+}
+
+.status-terminal strong {
+  color: #ffffff;
+}
+
+.status-terminal p:last-of-type::after {
+  content: "\258C";
+  display: inline-block;
+  margin-left: 0.2em;
+  color: #7ee787;
+  animation: status-caret 1s step-end infinite;
+}
+
+@keyframes status-caret {
+  50% { opacity: 0; }
 }
 
