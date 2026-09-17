@@ -7,7 +7,7 @@ about:
   image: assets/avatar.jpeg
   image-alt: "my avatar"
   image-shape: round
-  image-width: 13em
+  image-width: 11em
   id: hero-heading
   links:
     - icon: github
