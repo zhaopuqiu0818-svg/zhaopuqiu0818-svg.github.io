@@ -305,6 +305,7 @@ ul.task-list li input[type="checkbox"] {
 </header><main class="content column-page" id="quarto-document-content">
 
 <p>I am a 2nd year PhD student in the <a href="https://www.kcl.ac.uk/people/puqiu-zhao">Department of Political Economy</a> since October 2025, fully funded by the <a href="https://liss-dtp.ac.uk/students/puqiu-zhao/">London Interdisciplinary Social Science Doctoral Training Partnership</a> and UKRI Economic Social Research Council. My research investigates how stringent climate and energy policies influence potential Green backlash under exogenous shocks. My broader research interest is the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition.</p>
+<p><a href="./about.html">Read me more →</a></p>
 
 
 </main> 
@@ -407,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/puqiuzhao\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
