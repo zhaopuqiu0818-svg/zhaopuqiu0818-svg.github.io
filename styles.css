@@ -1,0 +1,72 @@
+/* css styles */
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.quarto-light {
+  background-color: #f2f3f5; /* light gray fallback */
+  background-image: url('assets/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* keep the reading area on a clean white panel so the background stays in the margins */
+body.quarto-light #quarto-document-content {
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+
+body.quarto-dark {
+  background-color: #05173f; /* dark mode fallback */
+  background-image: url('assets/bg-pattern-dark.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #e6e6e6;
+}
+
+/* keep the reading area on a clean dark panel so the background stays in the margins */
+body.quarto-dark #quarto-document-content {
+  background-color: rgba(10, 20, 45, 0.85);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+
+/* speech bubble popping out of the avatar */
+.quarto-about-jolla {
+  position: relative;
+}
+
+.quarto-about-jolla::after {
+  content: "Welcome to my website";
+  position: absolute;
+  top: -0.5em;
+  left: calc(50% + 3em);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 0.5em 0.9em;
+  border-radius: 16px 16px 16px 2px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  z-index: 5;
+  animation: bubble-float 3s ease-in-out infinite;
+}
+
+@keyframes bubble-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 480px) {
+  .quarto-about-jolla::after {
+    left: calc(50% + 2em);
+    font-size: 0.75rem;
+  }
+}
+
