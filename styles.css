@@ -123,68 +123,97 @@ body.quarto-dark #quarto-document-content {
   }
 }
 
-/* terminal-style "current status" card */
-.status-terminal {
-  max-width: 34em;
-  margin: 1.5em auto;
-  background: #1e1e1e;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  text-align: left;
-}
-
-.status-terminal-bar {
+/* PhD stage progress timeline */
+.phd-timeline {
+  position: relative;
   display: flex;
-  gap: 0.4em;
-  padding: 0.6em 0.8em;
-  background: #2d2d2d;
+  justify-content: space-between;
+  max-width: 34em;
+  margin: 2em auto 1em;
+  padding: 0 0.5em;
 }
 
-.status-terminal-bar .dot {
-  width: 0.7em;
-  height: 0.7em;
-  border-radius: 50%;
-  display: inline-block;
+.phd-timeline::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0.5em;
+  right: 0.5em;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.15;
 }
 
-.status-terminal-bar .dot-red { background: #ff5f56; }
-.status-terminal-bar .dot-yellow { background: #ffbd2e; }
-.status-terminal-bar .dot-green { background: #27c93f; }
-
-.status-terminal p {
-  padding: 0 1.1em;
-  margin: 0.7em 0;
-  color: #d4d4d4;
+.phd-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
-.status-terminal p:last-of-type {
-  margin-bottom: 1em;
-}
-
-.status-terminal code {
+.phd-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
   background: transparent;
-  padding: 0;
-  color: #7ee787;
+  border: 2px solid currentColor;
+  opacity: 0.35;
+  margin-bottom: 0.5em;
 }
 
-.status-terminal strong {
-  color: #ffffff;
+.phd-step.is-done .phd-dot {
+  background: #27c93f;
+  border-color: #27c93f;
+  opacity: 1;
 }
 
-.status-terminal p:last-of-type::after {
-  content: "\258C";
-  display: inline-block;
-  margin-left: 0.2em;
-  color: #7ee787;
-  animation: status-caret 1s step-end infinite;
+.phd-step.is-current .phd-dot {
+  width: 18px;
+  height: 18px;
+  background: #ffbd2e;
+  border-color: #ffbd2e;
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(255, 189, 46, 0.25);
+  animation: phd-pulse 2s ease-in-out infinite;
 }
 
-@keyframes status-caret {
-  50% { opacity: 0; }
+@keyframes phd-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(255, 189, 46, 0.25); }
+  50% { box-shadow: 0 0 0 7px rgba(255, 189, 46, 0.1); }
+}
+
+.phd-label {
+  opacity: 0.55;
+}
+
+.phd-step.is-current .phd-label,
+.phd-step.is-done .phd-label {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.phd-sublabel {
+  opacity: 0.6;
+  font-size: 0.65rem;
+  margin-top: 0.15em;
+}
+
+.phd-caption {
+  max-width: 30em;
+  margin: 0 auto 1.5em;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 480px) {
+  .phd-timeline {
+    font-size: 0.6rem;
+  }
 }
 
