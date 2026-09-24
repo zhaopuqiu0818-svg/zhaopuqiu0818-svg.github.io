@@ -1,10 +1,6 @@
 project:
   type: website
-format:
-  html:
-    include-in-header:
-      text: |
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="f5ab5e45-15b4-49d7-adbd-6c1e07c4853e"></script>
+
 website:
   title: "Puqiu Zhao"
   favicon: assets/favicon_io/favicon.ico
@@ -31,6 +27,9 @@ format:
       dark: [darkly, brand]
     css: styles.css
     toc: true
+    include-in-header:
+      text: |
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="f5ab5e45-15b4-49d7-adbd-6c1e07c4853e"></script>
 
 
 
