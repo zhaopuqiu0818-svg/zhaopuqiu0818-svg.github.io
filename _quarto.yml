@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Puqiu Zhao"
+  favicon: favicon.ico
   navbar:
     logo: assets/globe.svg
     logo-alt: "Globe icon"
