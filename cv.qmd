@@ -3,11 +3,11 @@ title: "CV"
 pagetitle: "CV — Puqiu Zhao"
 ---
 
-[Download PDF ⤓](assets/cv/Puqiu_Zhao_CV_2026.pdf){.btn .btn-outline-primary role="button" download}
+[Download PDF ⤓](assets/cv/Puqiu_Zhao_CV_2026.pdf?v=20260924){.btn .btn-outline-primary role="button" download}
 
 ```{=html}
-<iframe src="assets/cv/Puqiu_Zhao_CV_2026.pdf" width="100%" height="900" style="border: 1px solid #ccc; border-radius: 4px;">
+<iframe src="assets/cv/Puqiu_Zhao_CV_2026.pdf?v=20260924" width="100%" height="900" style="border: 1px solid #ccc; border-radius: 4px;">
   This browser does not support embedded PDFs.
-  <a href="assets/cv/Puqiu_Zhao_CV_2026.pdf">Download the CV instead.</a>
+  <a href="assets/cv/Puqiu_Zhao_CV_2026.pdf?v=20260924">Download the CV instead.</a>
 </iframe>
 ```
