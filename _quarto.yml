@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - favicon.ico
 
 website:
   title: "Puqiu Zhao"
@@ -29,6 +31,9 @@ format:
     toc: true
     include-in-header:
       text: |
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon_io/android-chrome-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
         <script defer src="https://cloud.umami.is/script.js" data-website-id="f5ab5e45-15b4-49d7-adbd-6c1e07c4853e"></script>
 
 
