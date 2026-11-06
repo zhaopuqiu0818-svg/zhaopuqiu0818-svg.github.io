@@ -35,16 +35,75 @@ body.quarto-dark #quarto-document-content {
   padding: 1.5rem 2rem;
 }
 
-/* speech bubble popping out of the avatar */
-.quarto-about-jolla {
-  position: relative;
+/* ---------- homepage hero: photo + links on the left, text on the right ---------- */
+@media (min-width: 861px) {
+  div.quarto-about-trestles.column-page {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: 15em minmax(0, 1fr);
+    grid-template-areas:
+      "photo header"
+      "links contents";
+    column-gap: 2.5em;
+    row-gap: 0.5em;
+    align-items: start;
+    padding-top: 3em !important;
+  }
+
+  div.quarto-about-trestles.column-page .about-entity {
+    display: contents !important;
+  }
+
+  div.quarto-about-trestles.column-page .about-image {
+    grid-area: photo;
+    justify-self: center;
+    margin-bottom: 0;
+  }
+
+  div.quarto-about-trestles.column-page #title-block-header {
+    grid-area: header;
+    align-self: center;
+    text-align: left;
+  }
+
+  div.quarto-about-trestles.column-page .about-links {
+    grid-area: links;
+    justify-self: center;
+    padding-top: 1em;
+    padding-bottom: 0;
+  }
+
+  div.quarto-about-trestles.column-page .about-contents {
+    grid-area: contents;
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
-.quarto-about-jolla::after {
+@media (max-width: 860px) {
+  div.quarto-about-trestles.column-page {
+    position: relative;
+    align-items: center;
+    text-align: center;
+  }
+
+  div.quarto-about-trestles.column-page .about-entity {
+    display: contents !important;
+  }
+
+  div.quarto-about-trestles.column-page .about-contents {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* speech bubble popping out of the avatar */
+div.quarto-about-trestles::after {
   content: "Welcome to my website";
   position: absolute;
-  top: -0.5em;
-  left: calc(50% + 3em);
+  top: 2.5em;
+  left: calc(7.5em + 3em);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.85rem;
   background: #ffffff;
@@ -63,23 +122,30 @@ body.quarto-dark #quarto-document-content {
   50% { transform: translateY(-6px); }
 }
 
+@media (max-width: 860px) {
+  div.quarto-about-trestles::after {
+    top: -0.5em;
+    left: calc(50% + 3em);
+  }
+}
+
 @media (max-width: 480px) {
-  .quarto-about-jolla::after {
-    left: calc(50% + 2em);
-    font-size: 0.75rem;
+  div.quarto-about-trestles::after {
+    left: auto;
+    right: 0.5em;
+    font-size: 0.7rem;
   }
 }
 
 /* subtitle typed out like a terminal prompt */
-.quarto-about-jolla .subtitle {
-  position: relative;
-  left: 50%;
-  transform: translateX(-22ch);
+div.quarto-about-trestles .subtitle {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
+  margin-bottom: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 1.05rem;
   animation: subtitle-typing 2.5s steps(44, end) forwards;
 }
 
@@ -89,16 +155,13 @@ body.quarto-dark #quarto-document-content {
 }
 
 /* research areas, typed out thinner and smaller, right after the subtitle finishes */
-.quarto-about-jolla .quarto-title::after {
+div.quarto-about-trestles .quarto-title::after {
   content: "European Politics, Environmental Politics, and Causal Inference";
-  position: relative;
-  left: 50%;
-  transform: translateX(-31.5ch);
   display: block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  margin-top: 0.5em;
+  margin-top: 0.6em;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.8rem;
   font-weight: 300;
@@ -117,9 +180,17 @@ body.quarto-dark #quarto-document-content {
   50% { border-color: transparent; }
 }
 
-@media (max-width: 480px) {
-  .quarto-about-jolla .quarto-title::after {
-    font-size: 0.7rem;
+/* narrow screens: skip the fixed-width typing effect so long lines can wrap */
+@media (max-width: 860px) {
+  div.quarto-about-trestles .subtitle,
+  div.quarto-about-trestles .quarto-title::after {
+    width: auto;
+    white-space: normal;
+    animation: none;
+  }
+
+  div.quarto-about-trestles .quarto-title::after {
+    border-right: none;
   }
 }
 

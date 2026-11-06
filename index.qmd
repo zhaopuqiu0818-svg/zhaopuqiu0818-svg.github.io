@@ -3,11 +3,11 @@ title: "Puqiu Zhao, PhD student"
 pagetitle: "Puqiu Zhao"
 subtitle: "Political Scientist at King's College London"
 about:
-  template: jolla
+  template: trestles
   image: assets/avatar.jpeg
   image-alt: "my avatar"
   image-shape: round
-  image-width: 11em
+  image-width: 13em
   id: hero-heading
   links:
     - icon: github
