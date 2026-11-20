@@ -288,3 +288,41 @@ div.quarto-about-trestles .quarto-title::after {
   }
 }
 
+
+/* project card on the homepage */
+.project-card {
+  max-width: 34em;
+  margin: 1.5em auto 1em;
+  padding: 0.9em 1.1em;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-left: 4px solid #ffbd2e;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.project-card p {
+  margin: 0;
+}
+
+.project-card .project-label {
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 0.35em;
+}
+
+.project-card .project-title {
+  display: block;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.project-card .project-meta {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.8rem;
+  opacity: 0.65;
+}

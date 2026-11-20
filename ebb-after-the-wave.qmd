@@ -1,0 +1,32 @@
+---
+title: "The Ebb after the Wave: Explaining the Diverging Electoral Fortunes of European Green Parties after 2019"
+pagetitle: "The Ebb after the Wave"
+author:
+  - name: "Puqiu Zhao"
+    affiliation: "Department of Political Economy, King's College London"
+date-modified: last-modified
+bibliography: assets/refs/ebb-after-the-wave.bib
+nocite: '@*'
+link-citations: true
+---
+
+::: {.callout-note appearance="simple"}
+**Work in progress.** This page accompanies a conference poster and will be updated as the project develops. Comments are very welcome: [puqiu.zhao@kcl.ac.uk](mailto:puqiu.zhao@kcl.ac.uk).
+:::
+
+## About the project
+
+After the 2019 "green wave", support for Green parties across Europe moved in different directions as COVID-19 (2020) and Russia's full-scale invasion of Ukraine (2022) hit European economies. Some Green parties lost ground; others gained it.
+
+**Research question.** Why did support for Green parties diverge after the 2019 green victory, and why have some parties held on to their voters in times of crisis while others have not?
+
+Existing work mostly treats Green parties as one party family and explains their post-crisis decline through myopic voters who push climate concerns down the agenda when the economy deteriorates (the luxury voting argument), and through issue competition with other party families. This project instead asks when voters are *less* myopic and how Green parties differ in their responses to economic downturns.
+
+The empirical analysis draws on the European Social Survey (waves 7–11, 2014–2024).
+
+## Literature
+
+The works cited in the current draft are listed below so that readers can find the literature behind the poster. Where available, links lead to the publisher or DOI.
+
+::: {#refs}
+:::
