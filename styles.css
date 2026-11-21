@@ -274,14 +274,6 @@ div.quarto-about-trestles .quarto-title::after {
   margin-top: 0.15em;
 }
 
-.phd-caption {
-  max-width: 30em;
-  margin: 0 auto 1.5em;
-  text-align: center;
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
 @media (max-width: 480px) {
   .phd-timeline {
     font-size: 0.6rem;
@@ -325,4 +317,48 @@ div.quarto-about-trestles .quarto-title::after {
   margin-top: 0.4em;
   font-size: 0.8rem;
   opacity: 0.65;
+}
+
+/* homepage: intro and research are separate panels instead of one shared panel */
+body.quarto-light .about-contents #quarto-document-content,
+body.quarto-dark .about-contents #quarto-document-content {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.intro-section,
+.research-section {
+  margin-bottom: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+}
+
+body.quarto-light .intro-section,
+body.quarto-light .research-section {
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+body.quarto-dark .intro-section,
+body.quarto-dark .research-section {
+  background-color: rgba(10, 20, 45, 0.85);
+}
+
+.research-section h2 {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.research-section .project-card {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .intro-section,
+  .research-section {
+    padding: 1.25rem 1.25rem;
+  }
 }
