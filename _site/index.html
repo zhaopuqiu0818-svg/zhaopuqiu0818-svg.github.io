@@ -360,6 +360,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I am a 2nd year PhD student in the <a href="https://www.kcl.ac.uk/people/puqiu-zhao">Department of Political Economy</a> since October 2025, fully funded by the <a href="https://liss-dtp.ac.uk/students/puqiu-zhao/">London Interdisciplinary Social Science Doctoral Training Partnership</a> and UKRI Economic and Social Research Council.</p>
 <p>My main research agenda centres on climate politics and voting behaviour, with a regional focus on European countries. In particular, I study how stringent climate and energy policies influence potential Green backlash under exogenous shocks.</p>
 <p>My broader research interests include the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition, and other important issues in environmental and climate politics, such as climate activism, climate denialism, microplastic governance and international climate change negotiations.</p>
+<p>I am incorporating and further developing quantitative methods in my research, particularly causal inference, quantitative text analysis, and large language models (LLMs).</p>
 <div class="phd-timeline">
   <div class="phd-step is-done">
     <span class="phd-dot"></span>
@@ -487,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/puqiuzhao\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

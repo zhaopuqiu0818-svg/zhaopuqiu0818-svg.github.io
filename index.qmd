@@ -57,6 +57,8 @@ My main research agenda centres on climate politics and voting behaviour, with a
 
 My broader research interests include the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition, and other important issues in environmental and climate politics, such as climate activism, climate denialism, microplastic governance and international climate change negotiations.
 
+I am incorporating and further developing quantitative methods in my research, particularly causal inference, quantitative text analysis, and large language models (LLMs).
+
 ```{=html}
 <div class="phd-timeline">
   <div class="phd-step is-done">
