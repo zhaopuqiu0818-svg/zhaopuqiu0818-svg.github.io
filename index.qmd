@@ -23,6 +23,7 @@ about:
       aria-label: X (Twitter)
       href: https://x.com/KevinZhaopuqiu
 page-layout: full
+toc: false
 execute: 
   freeze: false
   echo: false
@@ -30,6 +31,7 @@ execute:
 comments: false
 ---
 
+::: {.intro-section}
 I am a 2nd year PhD student in the [Department of Political Economy](https://www.kcl.ac.uk/people/puqiu-zhao) since October 2025, fully funded by the [London Interdisciplinary Social Science Doctoral Training Partnership](https://liss-dtp.ac.uk/students/puqiu-zhao/) and UKRI Economic Social Research Council. My research investigates how stringent climate and energy policies influence potential Green backlash under exogenous shocks. My broader research interest is the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition.
 
 ```{=html}
@@ -58,9 +60,11 @@ I am a 2nd year PhD student in the [Department of Political Economy](https://www
 </div>
 ```
 
-::: {.phd-caption}
-Currently developing the theoretical framework to explain why voters exhibit less myopic behaviour under certain circumstances, and to provide a roadmap for the empirical analysis.
+[Read me more →](about.qmd)
 :::
+
+::: {.research-section}
+## Research {.unlisted}
 
 ::: {.project-card}
 [Current project]{.project-label}
@@ -69,5 +73,4 @@ Currently developing the theoretical framework to explain why voters exhibit les
 
 [Work in progress · abstract and literature]{.project-meta}
 :::
-
-[Read me more →](about.qmd)
+:::
