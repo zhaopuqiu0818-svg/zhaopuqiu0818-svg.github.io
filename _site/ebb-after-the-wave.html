@@ -390,6 +390,7 @@ div.csl-indent {
 <section id="about-the-project" class="level2">
 <h2 class="anchored" data-anchor-id="about-the-project">About the project</h2>
 <p>European Green parties’ electoral performance provides an important barometer of public attitudes towards climate change and societal demand for further climate action. European Parliament elections are particularly valuable because, as second-order elections, they allow voters to express their preferences more sincerely. The 2019 election marked a significant breakthrough for Green parties, widely associated with the European Green Deal. However, most Green parties experienced declining vote shares in 2024.</p>
+<p><strong>Research question.</strong> Why did the crises lead to a decline in support for some Green parties, while others maintained or even increased their support?</p>
 <p>Existing studies explain the universal decline from the environmental and economic trade-off from the demand and spatial and issue competition from the supply. However, we still do not know why some Green parties have declined while others have gained ground. The paper offers a parsimonious theoretical explanation based on the sanctioning and selection logic, and explains the variation through three main mechanisms: strategic policy changes by Green parties, heterogeneous external shocks, and signals sent by competing political parties. We empirically examine these mechanisms and primarily find that heterogeneous external shocks alone cannot account for the divergence. The paper identifies the party characteristics that enable Green parties to sustain electoral support during the economic crisis.</p>
 </section>
 <section id="literature" class="level2">
@@ -620,7 +621,7 @@ Spoon, Jae‐Jae, Sara B. Hobolt, and Catherine E. De Vries. 2014. <span>“Goin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/puqiuzhao\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
