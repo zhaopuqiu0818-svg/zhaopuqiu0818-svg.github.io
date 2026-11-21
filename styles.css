@@ -23,23 +23,31 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* background: plain colour with a Western Europe map that scales with the window */
 body.quarto-light {
-  background-color: #f2f3f5; /* light gray fallback */
-  /* Western Europe map on top of the chart pattern; the map scales with the window */
-  background-image: url('assets/bg-map-europe.svg'), url('assets/bg-pattern.svg');
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto min(86vh, 62vw), cover;
-  background-position: right 3vw bottom 6vh, center;
-  background-attachment: fixed, fixed;
+  background-color: #f2f3f5;
+  background-image: url('assets/bg-map-europe.svg');
+}
+
+body.quarto-dark {
+  background-color: #05173f;
+  background-image: url('assets/bg-map-europe-dark.svg');
+  color: #e6e6e6;
+}
+
+body.quarto-light,
+body.quarto-dark {
+  background-repeat: no-repeat;
+  background-size: auto min(86vh, 62vw);
+  background-position: right 3vw bottom 6vh;
+  background-attachment: fixed;
 }
 
 /* narrow windows: the content covers the margin anyway, so drop the map */
 @media (max-width: 900px) {
-  body.quarto-light {
-    background-image: url('assets/bg-pattern.svg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  body.quarto-light,
+  body.quarto-dark {
+    background-image: none;
   }
 }
 
@@ -48,15 +56,6 @@ body.quarto-light #quarto-document-content {
   background-color: rgba(255, 255, 255, 0.88);
   border-radius: 8px;
   padding: 1.5rem 2rem;
-}
-
-body.quarto-dark {
-  background-color: #05173f; /* dark mode fallback */
-  background-image: url('assets/bg-pattern-dark.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #e6e6e6;
 }
 
 /* keep the reading area on a clean dark panel so the background stays in the margins */
