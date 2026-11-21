@@ -25,10 +25,22 @@ body {
 
 body.quarto-light {
   background-color: #f2f3f5; /* light gray fallback */
-  background-image: url('assets/bg-pattern.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  /* Western Europe map on top of the chart pattern; the map scales with the window */
+  background-image: url('assets/bg-map-europe.svg'), url('assets/bg-pattern.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto min(86vh, 62vw), cover;
+  background-position: right 3vw bottom 6vh, center;
+  background-attachment: fixed, fixed;
+}
+
+/* narrow windows: the content covers the margin anyway, so drop the map */
+@media (max-width: 900px) {
+  body.quarto-light {
+    background-image: url('assets/bg-pattern.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 
 /* keep the reading area on a clean white panel so the background stays in the margins */

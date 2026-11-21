@@ -17,24 +17,4 @@
   <!-- second, smoother trend line -->
   <polyline points="0,680 100,660 200,690 300,650 400,670 500,630 600,650 700,610 800,630 900,600 1000,615 1100,590 1200,605 1300,580 1400,595 1500,570 1600,585" fill="none" stroke="#94a3b8" stroke-width="1.5" opacity="0.14"/>
 
-  <!-- coefficient plot cluster: dashed zero line + point estimates with CI whiskers -->
-  <g transform="translate(1120,90)">
-    <line x1="120" y1="0" x2="120" y2="260" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" opacity="0.25"/>
-    <g stroke="#64748b" stroke-width="1.5" opacity="0.2">
-      <line x1="60" y1="20" x2="180" y2="20"/>
-      <line x1="40" y1="60" x2="150" y2="60"/>
-      <line x1="90" y1="100" x2="220" y2="100"/>
-      <line x1="30" y1="140" x2="130" y2="140"/>
-      <line x1="70" y1="180" x2="200" y2="180"/>
-      <line x1="50" y1="220" x2="160" y2="220"/>
-    </g>
-    <g fill="#475569" opacity="0.25">
-      <circle cx="130" cy="20" r="4"/>
-      <circle cx="95" cy="60" r="4"/>
-      <circle cx="160" cy="100" r="4"/>
-      <circle cx="75" cy="140" r="4"/>
-      <circle cx="140" cy="180" r="4"/>
-      <circle cx="100" cy="220" r="4"/>
-    </g>
-  </g>
 </svg>
