@@ -32,7 +32,11 @@ comments: false
 ---
 
 ::: {.intro-section}
-I am a 2nd year PhD student in the [Department of Political Economy](https://www.kcl.ac.uk/people/puqiu-zhao) since October 2025, fully funded by the [London Interdisciplinary Social Science Doctoral Training Partnership](https://liss-dtp.ac.uk/students/puqiu-zhao/) and UKRI Economic Social Research Council. My research investigates how stringent climate and energy policies influence potential Green backlash under exogenous shocks. My broader research interest is the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition.
+I am a 2nd year PhD student in the [Department of Political Economy](https://www.kcl.ac.uk/people/puqiu-zhao) since October 2025, fully funded by the [London Interdisciplinary Social Science Doctoral Training Partnership](https://liss-dtp.ac.uk/students/puqiu-zhao/) and UKRI Economic and Social Research Council.
+
+My main research agenda centres on climate politics and voting behaviour, with a regional focus on European countries. In particular, I study how stringent climate and energy policies influence potential Green backlash under exogenous shocks.
+
+My broader research interests include the mechanism of shifting positions of far-right populist parties regarding climate change and the energy transition, and other important issues in environmental and climate politics, such as climate activism, climate denialism, microplastic governance and international climate change negotiations.
 
 ```{=html}
 <div class="phd-timeline">
