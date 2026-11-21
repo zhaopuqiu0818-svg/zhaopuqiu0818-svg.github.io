@@ -31,6 +31,14 @@ execute:
 comments: false
 ---
 
+```{=html}
+<aside class="education" aria-label="Education">
+  <p><b>MA</b> · China Foreign Affairs University · 2025</p>
+  <p><b>MSc</b> · University of East Anglia · 2024</p>
+  <p><b>BSc</b> · University of International Relations (Beijing) · 2022</p>
+</aside>
+```
+
 ::: {.intro-section}
 I am a 2nd year PhD student in the [Department of Political Economy](https://www.kcl.ac.uk/people/puqiu-zhao) since October 2025, fully funded by the [London Interdisciplinary Social Science Doctoral Training Partnership](https://liss-dtp.ac.uk/students/puqiu-zhao/) and UKRI Economic and Social Research Council.
 

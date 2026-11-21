@@ -23,8 +23,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* background: plain colour, plus a Western Europe map pinned to the viewport
-   (a fixed pseudo-element, so it never scrolls with the page, also on Safari/iOS) */
+/* background: plain colour, plus a Western Europe map that scrolls with the page */
 :root {
   --map-h: min(76vh, 36vw);
 }
@@ -38,11 +37,15 @@ body.quarto-dark {
   color: #e6e6e6;
 }
 
+body {
+  position: relative;
+}
+
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   right: 2vw;
-  bottom: 7vh;
+  top: max(110px, 14vh);
   height: var(--map-h);
   width: calc(var(--map-h) * 0.87);
   background-repeat: no-repeat;
@@ -98,7 +101,7 @@ body.quarto-dark #quarto-document-content {
     grid-template-areas:
       "photo header"
       "links contents";
-    column-gap: 2.5em;
+    column-gap: 3.2em;
     row-gap: 0.5em;
     align-items: start;
     padding-top: 3em !important;
@@ -128,7 +131,7 @@ body.quarto-dark #quarto-document-content {
   }
 
   div.quarto-about-trestles.column-page .about-contents {
-    grid-area: contents;
+    grid-area: contents !important;
     border-left: none;
     padding-left: 0;
   }
@@ -472,4 +475,40 @@ body.quarto-dark .research-section {
   font-family: "Libre Baskerville", Baskerville, Georgia, "Times New Roman", serif;
   font-size: 0.95rem;
   line-height: 1.85;
+}
+
+
+/* education: three compact lines in the blank space under the photo on wide screens */
+.education p {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+@media (min-width: 861px) {
+  .education {
+    position: absolute;
+    left: 0.5rem;
+    top: 21rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .education {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    text-align: left;
+    overflow-x: auto;
+  }
+
+  body.quarto-light .education {
+    background-color: rgba(255, 255, 255, 0.88);
+  }
+
+  body.quarto-dark .education {
+    background-color: rgba(10, 20, 45, 0.85);
+  }
 }
