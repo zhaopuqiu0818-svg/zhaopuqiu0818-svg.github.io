@@ -431,3 +431,10 @@ body.quarto-dark .research-section {
     padding: 1.25rem 1.25rem;
   }
 }
+
+/* homepage bio uses the same serif as the site name */
+.intro-section > p {
+  font-family: "Libre Baskerville", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
