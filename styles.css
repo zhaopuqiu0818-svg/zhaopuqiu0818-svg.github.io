@@ -1,5 +1,24 @@
 /* css styles */
 
+/* typography: serif headings (Libre Baskerville), clean grotesque body */
+body {
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans", Arial, sans-serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.quarto-title h1.title,
+.navbar-brand .navbar-title {
+  font-family: "Libre Baskerville", Baskerville, Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.navbar, .nav-footer, .callout {
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans", Arial, sans-serif;
+}
+
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -222,7 +241,7 @@ div.quarto-about-trestles .quarto-title::after {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans", Arial, sans-serif;
   font-size: 0.7rem;
   text-align: center;
 }
@@ -281,42 +300,97 @@ div.quarto-about-trestles .quarto-title::after {
 }
 
 
-/* project card on the homepage */
-.project-card {
-  max-width: 34em;
-  margin: 1.5em auto 1em;
-  padding: 0.9em 1.1em;
-  border: 1px solid rgba(128, 128, 128, 0.3);
-  border-left: 4px solid #ffbd2e;
-  border-radius: 6px;
-  text-align: left;
+/* paper entry on the homepage */
+.paper-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.4;
 }
 
-.project-card p {
-  margin: 0;
+.paper-meta {
+  margin: 0 0 1rem;
+  font-size: 1rem;
 }
 
-.project-card .project-label {
-  display: block;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
+.paper-tags {
+  margin: 0 0 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.65;
-  margin-bottom: 0.35em;
+  opacity: 0.6;
 }
 
-.project-card .project-title {
-  display: block;
-  font-weight: 600;
-  line-height: 1.35;
+.paper-quote {
+  margin: 0 0 1.1rem;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 3px solid #c9a66b;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.75;
 }
 
-.project-card .project-meta {
-  display: block;
-  margin-top: 0.4em;
-  font-size: 0.8rem;
-  opacity: 0.65;
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.paper-btn {
+  padding: 0.35rem 0.9rem;
+  border: 2px solid #b03a3a;
+  border-radius: 2px;
+  color: #b03a3a;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.paper-btn:hover {
+  background: #b03a3a;
+  color: #fff;
+}
+
+body.quarto-dark .paper-btn {
+  border-color: #e07a7a;
+  color: #e07a7a;
+}
+
+body.quarto-dark .paper-btn:hover {
+  background: #e07a7a;
+  color: #111;
+}
+
+.paper-abstract {
+  flex: 1 1 100%;
+}
+
+.paper-abstract summary {
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.paper-abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-abstract summary::before {
+  content: "\25B8  ";
+}
+
+.paper-abstract[open] summary::before {
+  content: "\25BE  ";
+}
+
+.paper-abstract p {
+  margin: 0.8rem 0 0;
+  font-size: 0.95rem;
 }
 
 /* homepage: intro and research are separate panels instead of one shared panel */
@@ -349,11 +423,6 @@ body.quarto-dark .research-section {
   padding: 0;
   border: none;
   font-size: 1.25rem;
-}
-
-.research-section .project-card {
-  max-width: none;
-  margin: 0;
 }
 
 @media (max-width: 480px) {

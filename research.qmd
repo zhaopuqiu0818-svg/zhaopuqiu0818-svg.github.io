@@ -1,0 +1,9 @@
+---
+title: "Research"
+pagetitle: "Research"
+toc: false
+---
+
+## Work in progress
+
+{{< include _paper-ebb.qmd >}}
