@@ -594,11 +594,31 @@ body.quarto-dark .research-section {
 
 /* Research page: the panel stretches right up to the map */
 @media (min-width: 1100px) {
-  #quarto-content:has(> #quarto-document-content > section > .paper-grid) {
+  #quarto-content:has(> #quarto-document-content > section > .paper-grid),
+  #quarto-content:has(> #quarto-document-content .quarto-title-meta-author) {
     margin-right: calc(var(--map-h) * 0.87 + 2vw);
   }
 
-  #quarto-document-content:has(> section > .paper-grid) {
+  #quarto-document-content:has(> section > .paper-grid),
+  #quarto-document-content:has(.quarto-title-meta-author) {
     grid-column: body-content-start / screen-end;
+  }
+}
+
+/* project page: smaller title */
+#quarto-document-content:has(.quarto-title-meta-author) .quarto-title h1.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+#quarto-document-content:has(.quarto-title-meta-author) h2 {
+  font-size: 1.05rem;
+}
+
+/* any page with an author line is a project page: no side table of contents, so the panel can reach the map */
+@media (min-width: 1100px) {
+  #quarto-content:has(> #quarto-document-content .quarto-title-meta-author) #quarto-margin-sidebar {
+    display: none;
   }
 }
