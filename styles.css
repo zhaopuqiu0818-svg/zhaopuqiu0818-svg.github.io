@@ -338,32 +338,47 @@ div.quarto-about-trestles .quarto-title::after {
 }
 
 
-/* paper entry on the homepage */
+/* paper entries: small blocks, side by side */
+.paper-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+  align-items: start;
+}
+
+.paper {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(128, 128, 128, 0.28);
+  border-radius: 6px;
+}
+
 .paper-title {
-  margin: 0 0 0.6rem;
-  font-size: 1.15rem;
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
   line-height: 1.4;
 }
 
 .paper-meta {
-  margin: 0 0 1rem;
-  font-size: 1rem;
+  margin: 0 0 0.2rem;
+  font-size: 0.68rem;
+  opacity: 0.85;
 }
 
 .paper-tags {
-  margin: 0 0 0.9rem;
-  font-size: 0.78rem;
+  margin: 0 0 0.3rem;
+  font-size: 0.56rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .paper-quote {
-  margin: 0 0 1.1rem;
-  padding: 0.2rem 0 0.2rem 1rem;
-  border-left: 3px solid #c9a66b;
-  font-size: 1rem;
+  margin: 0 0 0.35rem;
+  padding: 0 0 0 0.6rem;
+  border-left: 2px solid #c9a66b;
+  font-size: 0.7rem;
+  line-height: 1.45;
   font-style: italic;
   opacity: 0.75;
 }
@@ -372,16 +387,17 @@ div.quarto-about-trestles .quarto-title::after {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .paper-btn {
-  padding: 0.35rem 0.9rem;
-  border: 2px solid #b03a3a;
+  padding: 0.05rem 0.55rem;
+  border: 1.5px solid #b03a3a;
   border-radius: 2px;
   color: #b03a3a;
+  font-size: 0.64rem;
   text-decoration: none;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .paper-btn:hover {
@@ -407,9 +423,9 @@ body.quarto-dark .paper-btn:hover {
   display: inline-block;
   cursor: pointer;
   list-style: none;
-  font-size: 0.78rem;
+  font-size: 0.56rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.6;
 }
@@ -427,8 +443,9 @@ body.quarto-dark .paper-btn:hover {
 }
 
 .paper-abstract p {
-  margin: 0.8rem 0 0;
-  font-size: 0.95rem;
+  margin: 0.45rem 0 0;
+  font-size: 0.68rem;
+  line-height: 1.5;
 }
 
 /* homepage: intro and research are separate panels instead of one shared panel */
@@ -457,10 +474,10 @@ body.quarto-dark .research-section {
 }
 
 .research-section h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   padding: 0;
   border: none;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 480px) {
@@ -541,5 +558,41 @@ body.quarto-dark .research-section {
 
   body.quarto-dark .education {
     background-color: rgba(10, 20, 45, 0.85);
+  }
+}
+
+
+/* Research page: a small, compact panel */
+#quarto-document-content:has(> section > .paper-grid) {
+  align-self: start;
+  max-width: none;
+  padding: 0.8rem 1.1rem 0.4rem;
+}
+
+#quarto-document-content:has(> section > .paper-grid) .quarto-title h1.title {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+#quarto-document-content:has(> section > .paper-grid) > section > h2 {
+  margin: 0 0 0.45rem;
+  padding: 0;
+  border: none;
+  font-size: 0.85rem;
+}
+
+#quarto-document-content:has(> section > .paper-grid) .quarto-title-block {
+  margin-bottom: 0;
+}
+
+
+/* Research page: the panel stretches right up to the map */
+@media (min-width: 1100px) {
+  #quarto-content:has(> #quarto-document-content > section > .paper-grid) {
+    margin-right: calc(var(--map-h) * 0.87 + 2vw);
+  }
+
+  #quarto-document-content:has(> section > .paper-grid) {
+    grid-column: body-content-start / screen-end;
   }
 }

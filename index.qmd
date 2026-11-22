@@ -91,5 +91,5 @@ I am incorporating and further developing quantitative methods in my research, p
 ::: {.research-section}
 ## Work in progress {.unlisted}
 
-{{< include _paper-ebb.qmd >}}
+{{< include _papers.qmd >}}
 :::
