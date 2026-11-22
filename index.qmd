@@ -32,7 +32,8 @@ comments: false
 ---
 
 ```{=html}
-<aside class="education" aria-label="Education">
+<aside class="education" aria-label="Contact and education">
+  <p class="edu-contact">Contact: <a href="mailto:puqiu.zhao@kcl.ac.uk">puqiu.zhao@kcl.ac.uk</a></p>
   <ul>
     <li>
       <span class="edu-year">2025</span>

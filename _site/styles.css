@@ -511,6 +511,12 @@ body.quarto-dark .research-section {
   line-height: 1.45;
 }
 
+.education .edu-contact {
+  margin: 0 0 1.1rem;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
 .education .edu-year {
   font-variant-numeric: tabular-nums;
   opacity: 0.55;
@@ -535,7 +541,7 @@ body.quarto-dark .research-section {
   .education {
     position: absolute;
     left: 0.5rem;
-    top: 23.5rem;
+    top: 21.2rem;
     width: 19rem;
   }
 }
